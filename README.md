@@ -24,7 +24,7 @@
     ```
 3. Crear una carpeta en la unidad de tu escritorio, ubicarse dentro de la carpeta
     * Carpeta: PROYECTO-CYPRESS
-    **NOTA:** Si se tiene la carpeta creada, obviar este paso.
+**NOTA:** Si se tiene la carpeta creada, obviar este paso.
 
 4. Abrir git bash y pegar  
     ```
@@ -50,17 +50,17 @@
     * Ingresar al archivo "cypress/cypress.env.json" y configurar
     ```
         {
-            "host" : "https://pre1acobranzas.pagoefectivo.pe/#/panel",
-            "api" : "https://pre.services.pagoefectivo.pe/v1",
+            "host" : "(ARCHIVO DRIVE - DATA AUTOMATIZACION)",
+            "api" : "(ARCHIVO DRIVE - DATA AUTOMATIZACION)",
             "login": {
-                "userName": "cobroscmk@und.pe",
-                "password": "cmkaren115"
+                "userName": "(ARCHIVO DRIVE - DATA AUTOMATIZACION)",
+                "password": "(ARCHIVO DRIVE - DATA AUTOMATIZACION)"
             },
             "db": {
-                "server": "pre.sql-database.pe.local",
+                "server": "(ARCHIVO DRIVE - DATA AUTOMATIZACION)",
                 "options": {
-                    "database": "db_pagoefectivo_pre",
-                    "port": 50789,
+                    "database": "(ARCHIVO DRIVE - DATA AUTOMATIZACION)",
+                    "port": (ARCHIVO DRIVE - DATA AUTOMATIZACION),
                     "rowCollectionOnRequestCompletion": true,
                     "trustServerCertificate": true
                 },
@@ -79,17 +79,17 @@
     * Ingresar al archivo "cypress/cypress.env.json" y configurar
     ```
         {
-            "host" : "https://cobranzas.pagoefectivo.pe/#/panel",
-            "api" : "https://services.pagoefectivo.pe/v1",
+            "host" : "(ARCHIVO DRIVE - DATA AUTOMATIZACION)",
+            "api" : "(ARCHIVO DRIVE - DATA AUTOMATIZACION)",
             "login": {
-                "userName": "joan.qape@ecodigital.pe",
-                "password": "wRk4kuQA"
+                "userName": "(ARCHIVO DRIVE - DATA AUTOMATIZACION)",
+                "password": "(ARCHIVO DRIVE - DATA AUTOMATIZACION)"
             },
             "db": {
-                "server": "reader.sql-database.pe.local",
+                "server": "(ARCHIVO DRIVE - DATA AUTOMATIZACION)",
                 "options": {
-                    "database": "BDPagoEfectivo",
-                    "port": 50789,
+                    "database": "(ARCHIVO DRIVE - DATA AUTOMATIZACION)",
+                    "port": (ARCHIVO DRIVE - DATA AUTOMATIZACION),
                     "rowCollectionOnRequestCompletion": true,
                     "trustServerCertificate": true
                 },
