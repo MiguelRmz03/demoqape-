@@ -1,4 +1,18 @@
 # PAGOEFECTIVO E2E FORM
+1. [PRE REQUISITOS](#pre-requisito)
+2. [INSTALACION](#instalacion)
+3. [CONFIGURAR PRE Y PROD](#configurar-pre-y-prod)
+4. [EJECUCION](#ejecucion)
+
+## PRE REQUISITOS
+***
+1. Configuracion de llaves SSH en la pc y repositorio
+2. Instalar Programas
+    * Visual Studio Code: [link](https://code.visualstudio.com/)
+    * Git: [link](https://git-scm.com/)
+    * Node.js: [link](https://nodejs.org/en/)
+
+**NOTA:** Si se tiene configurado las llaves SSH y instalados los programas, oviar este paso
 
 ## INSTALACION
 ***
@@ -17,7 +31,7 @@
 5. Se visualiza la carpeta creada 
     * Carpeta: pagoefectivo_e2e_form
 6. Abrir el proyecto en Visual Studio y ejecutar comandos en el terminal
-    * Crea el pachage.json
+    * Crea el package.json
     ```
     npm init
     ```
