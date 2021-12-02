@@ -1,49 +1,87 @@
-## Table of Contents
-1. [General Info](#general-info)
-2. [Technologies](#technologies)
-3. [Installation](#installation)
-4. [Collaboration](#collaboration)
-5. [FAQs](#faqs)
-### General Info
+# PAGOEFECTIVO E2E FORM
+
+## INSTALACION
 ***
-Write down the general informations of your project. It is worth to always put a project status in the Readme file. This is where you can add it. 
-### Screenshot
-![Image text](https://www.united-internet.de/fileadmin/user_upload/Brands/Downloads/Logo_IONOS_by.jpg)
-## Technologies
+1. Ingresar al link del repositorio: 
+    * [link bitbucket](https://bitbucket.org/orbisunt/pagoefectivo-e2e-form/src/master/): https://bitbucket.org/orbisunt/pagoefectivo-e2e-form/src/master/
+2. Boton Clonar, elegir SSH y copiar 
+    ```
+    git clone git@bitbucket.org:orbisunt/pagoefectivo-e2e-form.git
+    ```
+3. Crear una carpeta en la unidad de tu escritorio, ubicarse dentro de la carpeta
+    * Carpeta: PROYECTO-CYPRESS
+4. Abrir git bash y pegar  
+    ```
+    git clone git@bitbucket.org:orbisunt/pagoefectivo-e2e-form.git
+    ```
+5. Se visualiza la carpeta creada 
+    * Carpeta: pagoefectivo_e2e_form
+6. Abrir el proyecto en Visual Studio y ejecutar comandos en el terminal
+    * Crea el pachage.json
+    ```
+    npm init
+    ```
+    Boton Enter hasta que aparesca el mensaje
+    ```
+    Is this OK? (yes)  yes
+    ```
+    * Añadir paquetes faltantes
+        npm install cypress 
+
+## CONFIGURAR PRE Y PROD
 ***
-A list of technologies used within the project:
-* [Technologie name](https://example.com): Version 12.3 
-* [Technologie name](https://example.com): Version 2.34
-* [Library name](https://example.com): Version 1234
-## Installation
+1. **PRE**
+    * Verificar si el servicio esta con la configuracion formulario y activo
+        - Carpeta: cypress/fixtures/form-testdata.pre.js
+2. **PROD**
+    * Verificar si el servicio esta con la configuracion formulario y activo
+        - Carpeta: cypress/fixtures/form-testdata.prod.js
+## EJECUCION
 ***
-A little intro about the installation. 
-```
-$ git clone https://example.com
-$ cd ../path/to/the/file
-$ npm install
-$ npm start
-```
-Side information: To use the application in a special environment use ```lorem ipsum``` to start
-## Collaboration
-***
-Give instructions on how to collaborate with your project.
-> Maybe you want to write a quote in this part. 
-> It should go over several rows?
-> This is how you do it.
-## FAQs
-***
-A list of frequently asked questions
-1. **This is a question in bold**
-Answer of the first question with _italic words_. 
-2. __Second question in bold__ 
-To answer this question we use an unordered list:
-* First point
-* Second Point
-* Third point
-3. **Third question in bold**
-Answer of the third question with *italic words*.
-4. **Fourth question in bold**
-| Headline 1 in the tablehead | Headline 2 in the tablehead | Headline 3 in the tablehead |
-|:--------------|:-------------:|--------------:|
-| text-align left | text-align center | text-align right |
+1. **PRE**
+
+    **PARA FORM PERU:**
+    * Ingresar al terminal del Visual Studio y ejecutar 
+    ```
+    npm start
+    ```
+    * Se abre la pagina de Cypress y seleccionar
+        - form-peru-register.spec.js
+    * Se ejecuta las pruebas automatizadas
+    * Se pauseara la automatizacion para ingresar el codigo captcha
+        - Copiar codigo captcha y clic al boton play
+
+    **PARA FORM ECUADOR:**
+    * Ingresar al terminal del Visual Studio y ejecutar 
+    ```
+    npm start
+    ```
+    * Se abre la pagina de Cypress y seleccionar
+        - form-ecuador-register.spec.js
+    * Se ejecuta las pruebas automatizadas
+    * Se pauseara la automatizacion para ingresar el codigo captcha
+        - Copiar codigo captcha y clic al boton play
+
+2. **PROD**
+
+   **PARA FORM PERU:**
+    * Ingresar al terminal del Visual Studio y ejecutar 
+    ```
+    npm run start-prod
+    ```
+    * Se abre la pagina de Cypress y seleccionar
+        - form-peru-register.spec.js
+    * Se ejecuta las pruebas automatizadas
+    * Se pauseara la automatizacion para ingresar el codigo captcha
+        - Copiar codigo captcha y clic al boton play
+
+    **PARA FORM ECUADOR:**
+    * Ingresar al terminal del Visual Studio y ejecutar 
+    ```
+    npm run start_prod
+    ```
+    * Se abre la pagina de Cypress y seleccionar
+        - form-ecuador-register.spec.js
+    * Se ejecuta las pruebas automatizadas
+    * Se pauseara la automatizacion para ingresar el codigo captcha
+        - Copiar codigo captcha y clic al boton play
