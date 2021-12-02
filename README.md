@@ -23,8 +23,7 @@
     git clone git@bitbucket.org:orbisunt/pagoefectivo-e2e-charge.git
     ```
 3. Crear una carpeta en la unidad de tu escritorio, ubicarse dentro de la carpeta
-    * Carpeta: PROYECTO-CYPRESS
-**NOTA:** Si se tiene la carpeta creada, obviar este paso.
+    * Carpeta: PROYECTO-CYPRESS    **NOTA:** Si se tiene la carpeta creada, obviar este paso.
 
 4. Abrir git bash y pegar  
     ```
