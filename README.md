@@ -1,4 +1,4 @@
-# PAGOEFECTIVO E2E CHARGE
+# PAGOEFECTIVO E2E FORM
 1. [PRE REQUISITOS](#pre-requisito)
 2. [INSTALACION](#instalacion)
 3. [CONFIGURAR PRE Y PROD](#configurar-pre-y-prod)
@@ -17,118 +17,79 @@
 ## INSTALACION
 ***
 1. Ingresar al link del repositorio: 
-    * [link bitbucket](https://bitbucket.org/orbisunt/pagoefectivo-e2e-charge/src/master/): https://bitbucket.org/orbisunt/pagoefectivo-e2e-charge/src/master/
+    * [link bitbucket](https://bitbucket.org/orbisunt/pagoefectivo-e2e-form/src/master/): https://bitbucket.org/orbisunt/pagoefectivo-e2e-form/src/master/
 2. Boton Clonar, elegir SSH y copiar 
     ```
-    git clone git@bitbucket.org:orbisunt/pagoefectivo-e2e-charge.git
+    git clone git@bitbucket.org:orbisunt/pagoefectivo-e2e-form.git
     ```
 3. Crear una carpeta en la unidad de tu escritorio, ubicarse dentro de la carpeta
-    * Carpeta: PROYECTO-CYPRESS    
-    * **NOTA:** Si se tiene la carpeta creada, obviar este paso.
+    * Carpeta: PROYECTO-CYPRESS
+ **NOTA:** Si se tiene la carpeta creada, obviar este paso.
 
 4. Abrir git bash y pegar  
     ```
-    git clone git@bitbucket.org:orbisunt/pagoefectivo-e2e-charge.git
+    git clone git@bitbucket.org:orbisunt/pagoefectivo-e2e-form.git
     ```
 5. Se visualiza la carpeta creada 
-    * Carpeta: pagoefectivo_e2e_charge
+    * Carpeta: pagoefectivo-e2e-form
 6. Abrir el proyecto en Visual Studio y ejecutar comandos en el terminal
-    * Crea el package.json
-    ```
-    npm init
-    ```
-        Boton Enter hasta que aparesca el mensaje
-    ```
-    Is this OK? (yes)  yes
-    ```
     * Añadir paquetes faltantes
-        npm install cypress 
+        npm install 
 
 ## CONFIGURAR PRE Y PROD
 ***
 1. **PRE**
-    * Ingresar al archivo "cypress/cypress.env.json" y configurar
-    ```
-        {
-            "host" : "(ARCHIVO DRIVE - DATA AUTOMATIZACION)",
-            "api" : "(ARCHIVO DRIVE - DATA AUTOMATIZACION)",
-            "login": {
-                "userName": "(ARCHIVO DRIVE - DATA AUTOMATIZACION)",
-                "password": "(ARCHIVO DRIVE - DATA AUTOMATIZACION)"
-            },
-            "db": {
-                "server": "(ARCHIVO DRIVE - DATA AUTOMATIZACION)",
-                "options": {
-                    "database": "(ARCHIVO DRIVE - DATA AUTOMATIZACION)",
-                    "port": (ARCHIVO DRIVE - DATA AUTOMATIZACION),
-                    "rowCollectionOnRequestCompletion": true,
-                    "trustServerCertificate": true
-                },
-                "authentication": {
-                    "type": "default",
-                    "options": {  
-                        "userName": "(USUARIO DE BD)",
-                        "password": "(PASSWORD DE BD)"
-                    }
-                }
-            }
-        }
-    ```
-
+    * Verificar si el servicio esta con la configuracion formulario y activo
+        - Carpeta: cypress/fixtures/form-testdata.pre.js
 2. **PROD**
-    * Ingresar al archivo "cypress/cypress.env.json" y configurar
-    ```
-        {
-            "host" : "(ARCHIVO DRIVE - DATA AUTOMATIZACION)",
-            "api" : "(ARCHIVO DRIVE - DATA AUTOMATIZACION)",
-            "login": {
-                "userName": "(ARCHIVO DRIVE - DATA AUTOMATIZACION)",
-                "password": "(ARCHIVO DRIVE - DATA AUTOMATIZACION)"
-            },
-            "db": {
-                "server": "(ARCHIVO DRIVE - DATA AUTOMATIZACION)",
-                "options": {
-                    "database": "(ARCHIVO DRIVE - DATA AUTOMATIZACION)",
-                    "port": (ARCHIVO DRIVE - DATA AUTOMATIZACION),
-                    "rowCollectionOnRequestCompletion": true,
-                    "trustServerCertificate": true
-                },
-                "authentication": {
-                    "type": "default",
-                    "options": {  
-                        "userName": "(USUARIO DE BD)",
-                        "password": "(PASSWORD DE BD)"
-                    }
-                }
-            }
-        }
-    ```
-
+    * Verificar si el servicio esta con la configuracion formulario y activo
+        - Carpeta: cypress/fixtures/form-testdata.prod.js
 ## EJECUCION
 ***
 1. **PRE**
 
+    **PARA FORM PERU:**
     * Ingresar al terminal del Visual Studio y ejecutar 
     ```
     npm start
     ```
     * Se abre la pagina de Cypress y seleccionar
-        - complete-flow.spec.js
+        - form-peru-register.spec.js
     * Se ejecuta las pruebas automatizadas
-    * Se pauseara la automatizacion para que cambie de estado la cobranza
-        - Esperar un minuto y clic al boton play
+    * Se pondra en pausa la ejecucion para ingresar el codigo captcha
+        - Copiar codigo captcha y clic al boton play
 
-    
+    **PARA FORM ECUADOR:**
+    * Ingresar al terminal del Visual Studio y ejecutar 
+    ```
+    npm start
+    ```
+    * Se abre la pagina de Cypress y seleccionar
+        - form-ecuador-register.spec.js
+    * Se ejecuta las pruebas automatizadas
+    * Se pondra en pausa la ejecucion para ingresar el codigo captcha
+        - Copiar codigo captcha y clic al boton play
+
 2. **PROD**
 
    **PARA FORM PERU:**
     * Ingresar al terminal del Visual Studio y ejecutar 
     ```
-    npm run start
+    npm run start-prod
     ```
     * Se abre la pagina de Cypress y seleccionar
-        - complete-flow.spec.js
+        - form-peru-register.spec.js
     * Se ejecuta las pruebas automatizadas
-    * Se pauseara la automatizacion para que cambie de estado la cobranza
-        - Esperar un minuto y clic al boton play
-    
+    * Se pondra en pausa la ejecucion para ingresar el codigo captcha
+        - Copiar codigo captcha y clic al boton play
+
+    **PARA FORM ECUADOR:**
+    * Ingresar al terminal del Visual Studio y ejecutar 
+    ```
+    npm run start-prod
+    ```
+    * Se abre la pagina de Cypress y seleccionar
+        - form-ecuador-register.spec.js
+    * Se ejecuta las pruebas automatizadas
+    * Se pondra en pausa la ejecucion para ingresar el codigo captcha
+        - Copiar codigo captcha y clic al boton play
